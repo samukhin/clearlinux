@@ -2,4 +2,4 @@ FROM clearlinux
 
 RUN swupd bundle-add $(swupd bundle-list --all)
 
-ENTRYPOINT ["zsh"]
+ENTRYPOINT ["bash"]
