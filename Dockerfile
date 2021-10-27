@@ -16,6 +16,6 @@ RUN source /usr/lib/os-release \
 FROM scratch
 COPY --from=builder /install_root /
 
-RUN swupd bundle-add $(swupd bundle-list -a --quiet)
+RUN swupd bundle-add --skip-diskspace-check $(swupd bundle-list -a --quiet)
 
 CMD ["/bin/bash"]
